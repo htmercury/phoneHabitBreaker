@@ -2,6 +2,8 @@ import style from './style';
 
 const s = Object.create(style);
 
+let Background = '../images/iphoneTemplate.png';
+
 s.root = {
   fontFamily: 'helvetica, sans-serif',
   fontWeight: '300',
@@ -43,6 +45,22 @@ s.repoLink = {
 s.breadcrumbs = {
   margin: '3vh 0',
 };
+
+s.phone = {
+  backgroundImage: `url(${Background})`,
+	backgroundRepeat: 'no-repeat',
+  padding: '5px',
+  height: '940px',
+	width: '472px'
+};
+
+s.screen = {
+  backgroundColor: '#F0F0F0',
+  height: '710px',
+	width: '400px',
+	margin: '112px 23px',
+  borderRadius: '5px'
+}
 
 s.creditLine = {
   color: '#A0A0A0',

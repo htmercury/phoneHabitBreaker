@@ -22,11 +22,15 @@ export default function App() {
         <Breadcrumbs />
       </nav>
 
+      <div style={s.phone}>
+      <div style={s.screen}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/example" component={ExampleComponent} />
         <Route component={PageNotFound} />
       </Switch>
+      </div>
+      </div>
 
       <div style={s.creditLine}>
         <Interactive
