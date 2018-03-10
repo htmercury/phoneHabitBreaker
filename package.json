@@ -1,17 +1,17 @@
 {
-  "name": "spa-github-pages",
+  "name": "phoneHabitBreaker",
   "version": "5.1.0",
   "private": true,
-  "description": "Single Page Apps for GitHub Pages",
+  "description": "Phone Habit Breaker SPA for GitHub Pages",
   "scripts": {
     "start": "webpack-dev-server --devtool eval-source-map --content-base docs/ --history-api-fallback --open --openPage phoneHabitBreaker/",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": "git+https://github.com/htmercury/phoneHabitBreaker.git"
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "Ka Wong kawong2020@u.northwestern.edu",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.0",
