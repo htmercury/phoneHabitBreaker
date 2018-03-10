@@ -12,6 +12,10 @@ module.exports = {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
     ],
+    loaders: [
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      // ...
+    ]
   },
 
   plugins: process.argv.indexOf('-p') === -1 ? [] : [
