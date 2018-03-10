@@ -1,8 +1,9 @@
 import style from './style';
 
+
 const s = Object.create(style);
 
-let Background = '../images/iphoneTemplate.png';
+let Background = 'https://raw.githubusercontent.com/htmercury/phoneHabitBreaker/master/docs/images/iphoneTemplate.png';
 
 s.root = {
   fontFamily: 'helvetica, sans-serif',
