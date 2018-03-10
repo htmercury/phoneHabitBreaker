@@ -6,7 +6,7 @@ const s = Object.create(style);
 let Background = 'https://raw.githubusercontent.com/htmercury/phoneHabitBreaker/master/docs/images/iphoneTemplate.png';
 
 s.root = {
-  fontFamily: 'helvetica, sans-serif',
+  fontFamily: 'Roboto, helvetica, sans-serif',
   fontWeight: '300',
   fontSize: '16px',
   letterSpacing: '0.025em',
@@ -61,6 +61,13 @@ s.screen = {
 	width: '400px',
 	margin: '112px 23px',
   borderRadius: '5px'
+}
+
+s.headBar = {
+  height: '50px',
+  width: '400px',
+  backgroundColor: '#401f68',
+  borderRadius: '2px'
 }
 
 s.creditLine = {

@@ -23,13 +23,16 @@ export default function App() {
       </nav>
 
       <div style={s.phone}>
-      <div style={s.screen}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/example" component={ExampleComponent} />
-        <Route component={PageNotFound} />
-      </Switch>
-      </div>
+        <div style={s.screen}>
+        <div style={s.headBar}>
+          
+        </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/example" component={ExampleComponent} />
+            <Route component={PageNotFound} />
+          </Switch>
+        </div>
       </div>
 
       <div style={s.creditLine}>
