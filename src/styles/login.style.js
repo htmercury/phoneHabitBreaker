@@ -4,7 +4,7 @@ import style from './style';
 const s = Object.create(style);
 
 s.filler = {
-  height: '80px'
+  height: '60px'
 };
 
 s.caption = {
@@ -27,6 +27,17 @@ s.button = {
 
 s.icon = {
   fontSize: '36px'
-}
+};
+
+s.pageLinkContainer = {
+  margin: '1vh 0',
+  textAlign: 'center'
+};
+
+s.dialog = {
+  width: '400px',
+  maxWidth: 'none',
+  paddingRight: '50px'
+};
 
 export default s;
