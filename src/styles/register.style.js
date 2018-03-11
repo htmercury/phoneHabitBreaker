@@ -15,7 +15,7 @@ s.form = {
 
 s.nameContainer = {
   display: 'flex'
-}
+};
 
 s.buttonContainer = {
   display: 'flex',
