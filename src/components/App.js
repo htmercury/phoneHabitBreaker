@@ -6,6 +6,7 @@ import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
 import HeadBar from './HeadBar';
+import NavBar from './NavBar';
 import s from '../styles/app.style';
 // Material UI loader
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -41,9 +42,7 @@ export default function App() {
           </Switch>
           <div style={s.filler}>
           </div>
-          <div style={s.navBar}>
-            <p>test</p>
-          </div>
+          <NavBar style={s.navBar} />
         </div>
       </div>
 
