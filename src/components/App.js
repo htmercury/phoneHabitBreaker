@@ -5,10 +5,19 @@ import Home from './Home';
 import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
+import HeadBar from './HeadBar';
 import s from '../styles/app.style';
+// Material UI loader
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+
+const iconStyles = {
+  marginRight: 24,
+};
 
 export default function App() {
   return (
+    <MuiThemeProvider>
     <div style={s.root}>
       <h1 style={s.title}>Phone Habit Breaker SPA for GitHub Pages</h1>
       <Interactive
@@ -24,9 +33,7 @@ export default function App() {
 
       <div style={s.phone}>
         <div style={s.screen}>
-        <div style={s.headBar}>
-          
-        </div>
+        <HeadBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/example" component={ExampleComponent} />
@@ -48,5 +55,6 @@ export default function App() {
         </Interactive>
       </div>
     </div>
+    </MuiThemeProvider>
   );
 }

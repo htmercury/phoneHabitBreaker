@@ -63,13 +63,6 @@ s.screen = {
   borderRadius: '5px'
 }
 
-s.headBar = {
-  height: '50px',
-  width: '400px',
-  backgroundColor: '#401f68',
-  borderRadius: '2px'
-}
-
 s.creditLine = {
   color: '#A0A0A0',
   fontSize: '14px',
