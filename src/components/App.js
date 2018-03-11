@@ -1,6 +1,7 @@
 import React from 'react';
 import Interactive from 'react-interactive';
 import { Switch, Route } from 'react-router-dom';
+import Login from './Login';
 import Home from './Home';
 import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
@@ -36,7 +37,8 @@ export default function App() {
         <div style={s.screen}>
         <HeadBar />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Login} />
+            <Route path="/home" component={Home} />
             <Route path="/example" component={ExampleComponent} />
             <Route component={PageNotFound} />
           </Switch>

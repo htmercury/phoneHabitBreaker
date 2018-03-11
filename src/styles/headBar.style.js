@@ -11,12 +11,12 @@ s.headBar = {
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center'
-}
+};
 
 s.button = {
   height: '50px',
   color: '#ECEFF1'
-}
+};
 
 s.title = {
   fontSize: '26px',

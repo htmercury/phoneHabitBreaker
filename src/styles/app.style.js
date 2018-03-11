@@ -63,15 +63,15 @@ s.screen = {
   borderRadius: '5px',
   display: 'flex',
   flexDirection: 'column'
-}
+};
 
 s.filler = {
   flex: '1'
-}
+};
 
 s.navBar = {
   alignSelf: 'flex-end'
-}
+};
 
 s.creditLine = {
   color: '#A0A0A0',
