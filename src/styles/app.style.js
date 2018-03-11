@@ -60,7 +60,17 @@ s.screen = {
   height: '710px',
 	width: '400px',
 	margin: '112px 23px',
-  borderRadius: '5px'
+  borderRadius: '5px',
+  display: 'flex',
+  flexDirection: 'column'
+}
+
+s.filler = {
+  flex: '1'
+}
+
+s.navBar = {
+  alignSelf: 'flex-end'
 }
 
 s.creditLine = {

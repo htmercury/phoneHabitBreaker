@@ -5,23 +5,24 @@ import FontIcon from 'material-ui/FontIcon';
 import {blueGrey50, deepPurple800, blue500} from 'material-ui/styles/colors';
 // buttons
 import FlatButton from 'material-ui/FlatButton';
+import SettingsButton from './SettingsButton';
+import ShareButton from './ShareButton';
+// pop up menu
+import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
+import Menu from 'material-ui/Menu';
+import MenuItem from 'material-ui/MenuItem';
 
 const iconStyles = {
 };
 
 export default function HeadBar() {
   return (
-    <div style={s.headBar}>
-      <FlatButton
-        style={s.button}
-        icon={<FontIcon className="material-icons" style={iconStyles} color={blueGrey50}>settings</FontIcon>}
-      />
-      <h1 style={s.title}>My Time</h1>
-      <FlatButton
-        style={s.button}
-        icon={<FontIcon className="material-icons" style={iconStyles} color={blueGrey50}>share</FontIcon>}
-      />
+      <div style={s.headBar}>
+        <ShareButton />
 
-    </div>
-  );
+        <h1 style={s.title}>My Time</h1>
+
+        <SettingsButton />
+      </div>
+    );
 }

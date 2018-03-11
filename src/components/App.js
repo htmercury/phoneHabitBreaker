@@ -39,6 +39,11 @@ export default function App() {
             <Route path="/example" component={ExampleComponent} />
             <Route component={PageNotFound} />
           </Switch>
+          <div style={s.filler}>
+          </div>
+          <div style={s.navBar}>
+            <p>test</p>
+          </div>
         </div>
       </div>
 
