@@ -14,8 +14,7 @@ class LoginForm extends React.Component {
       name: '',
       password: '',
       nameError: '',
-      passwordError: '',
-      location: '/'
+      passwordError: ''
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
@@ -42,7 +41,7 @@ class LoginForm extends React.Component {
     else {
       this.setState({passwordError: ""});
     }
-    if (this.state.name != "" && this.state.password != "")
+    if (this.state.name && this.state.password)
       this.props.history.push('/home');
     event.preventDefault();
   }
@@ -79,7 +78,7 @@ class LoginForm extends React.Component {
             type="submit" />
           <RaisedButton
             label="Register"
-            containerElement={<Link to="/home"></Link>} />
+            containerElement={<Link to="/register"></Link>} />
         </div>
       </form>
     );

@@ -7,6 +7,7 @@ import s from '../styles/style';
 const breadCrumbTitles = {
   '': 'Login',
   home: 'Home',
+  register: 'Register',
   'two-deep': 'Two Deep',
 };
 
