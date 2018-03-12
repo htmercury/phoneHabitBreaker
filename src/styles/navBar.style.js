@@ -25,4 +25,10 @@ s.title = {
   color: '#ECEFF1'
 };
 
+s.dialog = {
+  width: '400px',
+  maxWidth: 'none',
+  paddingRight: '50px'
+};
+
 export default s;

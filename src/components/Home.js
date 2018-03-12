@@ -28,6 +28,7 @@ export default class Home extends React.Component {
     this.handleHourChange = this.handleHourChange.bind(this);
     this.handleMinuteChange = this.handleMinuteChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
   handleHourChange(event, value) {

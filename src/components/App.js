@@ -1,6 +1,8 @@
 import React from 'react';
 import Interactive from 'react-interactive';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
+import { withRouter } from "react-router-dom";
+import PropTypes from 'prop-types';
 import Login from './Login';
 import Register from './Register';
 import Home from './Home';
@@ -18,51 +20,72 @@ const iconStyles = {
   marginRight: 24,
 };
 
-export default function App() {
-  return (
-    <MuiThemeProvider>
-    <div style={s.root}>
-      <h1 style={s.title}>Phone Habit Breaker SPA for GitHub Pages</h1>
-      <Interactive
-        as="a"
-        href="https://github.com/htmercury/phoneHabitBreaker"
-        style={s.repoLink}
-        {...s.link}
-      >https://github.com/htmercury/phoneHabitBreaker</Interactive>
+class App extends React.Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
 
-      <nav style={s.breadcrumbs}>
-        <Breadcrumbs />
-      </nav>
+  state = {
+    open: false,
+    destination: ''
+  };
 
-      <div style={s.phone}>
-        <div style={s.screen}>
-        <HeadBar />
-          <Switch>
-            <Route exact path="/" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/home" component={Home} />
-            <Route path="/example" component={ExampleComponent} />
-            <Route component={PageNotFound} />
-          </Switch>
-          <div style={s.filler}>
-          </div>
-          <NavBar style={s.navBar} />
-        </div>
-      </div>
+  render() {
+    const { match, location, history } = this.props;
+    let loggedIn = (location.pathname != '/' && location.pathname != '/register');
 
-      <div style={s.creditLine}>
+    //console.log(location.pathname);
+    //console.log(loggedIn);
+
+    return (
+      <MuiThemeProvider>
+      <div style={s.root}>
+        <h1 style={s.title}>Phone Habit Breaker SPA for GitHub Pages</h1>
         <Interactive
           as="a"
-          href="https://www.mccormick.northwestern.edu/eecs/courses/descriptions/330.html"
-          interactiveChild
-          focus={{}}
-          touchActive={{}}
-          touchActiveTapOnly
-        >
-          Code and concept created for Northwestern&#39;s <span {...s.childLink}>EECS330 Course</span>
-        </Interactive>
+          href="https://github.com/htmercury/phoneHabitBreaker"
+          style={s.repoLink}
+          {...s.link}
+        >https://github.com/htmercury/phoneHabitBreaker</Interactive>
+
+        <nav style={s.breadcrumbs}>
+          <Breadcrumbs />
+        </nav>
+
+        <div style={s.phone}>
+          <div style={s.screen}>
+          <HeadBar />
+            <Switch>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/example" component={ExampleComponent} />
+              <Route component={PageNotFound} />
+            </Switch>
+            <div style={s.filler}>
+            </div>
+            <NavBar style={s.navBar} loginStatus={loggedIn}/>
+          </div>
+        </div>
+
+        <div style={s.creditLine}>
+          <Interactive
+            as="a"
+            href="https://www.mccormick.northwestern.edu/eecs/courses/descriptions/330.html"
+            interactiveChild
+            focus={{}}
+            touchActive={{}}
+            touchActiveTapOnly
+          >
+            Code and concept created for Northwestern&#39;s <span {...s.childLink}>EECS330 Course</span>
+          </Interactive>
+        </div>
       </div>
-    </div>
-    </MuiThemeProvider>
-  );
+      </MuiThemeProvider>
+    );
+  }
 }
+
+export default withRouter(App);

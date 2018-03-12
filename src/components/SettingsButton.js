@@ -1,5 +1,6 @@
 import React from 'react';
 import s from '../styles/headBar.style';
+import { Link } from 'react-router-dom';
 // font icons
 import FontIcon from 'material-ui/FontIcon';
 import {blueGrey50, deepPurple800, blue500} from 'material-ui/styles/colors';
@@ -57,9 +58,9 @@ export default class SettingsButton extends React.Component {
           >
             <Menu>
               <MenuItem primaryText="Refresh" />
-              <MenuItem primaryText="Help &amp; feedback" />
-              <MenuItem primaryText="Settings" />
-              <MenuItem primaryText="Sign out" />
+              <MenuItem primaryText="Help &amp; feedback" containerElement={<Link to="/example"></Link>} />
+              <MenuItem primaryText="Settings" containerElement={<Link to="/example"></Link>} />
+              <MenuItem primaryText="Sign out" containerElement={<Link to="/"></Link>} />
             </Menu>
           </Popover>
         </div>
