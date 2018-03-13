@@ -24,7 +24,7 @@ export default class Usage extends React.Component {
       titleError: '',
       bodyError: '',
       threadCount: 3,
-      // a thread consists of {title:[], body:[], id:[]}
+      // a thread consists of {title:[], body:[], id:[], avatar:[]}
       threadArray: [],
       commentCount: 0,
       commentArray: []
@@ -47,11 +47,17 @@ export default class Usage extends React.Component {
 
   handlePost = () => {
     if (this.state.titleInput != "" && this.state.bodyInput != "") {
-      let thread = {title: this.state.titleInput, body: this.state.bodyInput, id: this.state.threadCount};
+      let thread = {
+        title: this.state.titleInput,
+        body: this.state.bodyInput,
+        id: this.state.threadCount,
+        avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang6.jpg?raw=true',
+        name: 'Hang Wu',
+        comments: ['']
+      };
       let currThreadArray = this.state.threadArray;
       currThreadArray.push(thread);
-      this.setState({open: false, titleInput: '', bodyInput: '', threadCount: this.state.threadCount+1, threadArray: currThreadArray});
-      console.log(currThreadArray);
+      this.setState({open: false, titleInput: '', bodyInput: '', threadCount: this.state.threadCount+100, threadArray: currThreadArray});
     }
     else if (this.state.titleInput == "")
       this.setState({titleError: 'This field is required'})
@@ -132,83 +138,29 @@ export default class Usage extends React.Component {
         <div style={s.container}>
         <Subheader>Threads</Subheader>
           <List>
-                  <ListItem
-                    key={1}
-                    leftAvatar={<Avatar src="https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang2.jpg?raw=true" />}
-                    primaryText="Best tip i have so far"
-                    secondaryText={
-                    <p>
-                      <span style={{color: darkBlack}}>Brendan Lim</span> --
-                      Pro tip: sleep enough.
-                    </p>
-                    }
-                    secondaryTextLines={2}
-                    primaryTogglesNestedList={true}
-                    nestedItems={[
-                      <ListItem
-                        key={'a'}
-                        leftAvatar={<Avatar src="https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang3.jpg?raw=true" />}
-                        primaryText="Kevin Zheng"
-                        secondaryText="Yeah boi"
-                        disabled={true}
-                      />,
-                      <ListItem
-                        key={'comment'}
-                        disabled={true}
-                        primaryText={
-                          <div style={s.commentContainer}>
-                            <TextField
-                              hintText="Comment"
-                              style={s.commentText}
-                            />
-                            <IconButton iconClassName="fas fa-pencil-alt" onClick={this.commentNow}/>
-                          </div>}
-                        style={s.comment}
-                      />,
-                    ]}
-                  />
-                  <ListItem
-                    key={2}
-                    leftAvatar={<Avatar src="https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang1.jpg?raw=true" />}
-                    primaryText="What I accomplished"
-                    secondaryText={
-                    <p>
-                      <span style={{color: darkBlack}}>Huaiyu Wang</span> --
-                      I was able to not procrastinate today!
-                    </p>
-                    }
-                    secondaryTextLines={2}
-                    primaryTogglesNestedList={true}
-                    nestedItems={[
-                      <ListItem
-                        key={'a'}
-                        leftAvatar={<Avatar src="https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang3.jpg?raw=true" />}
-                        primaryText="Kevin Zheng"
-                        secondaryText="Amazing dude. Keep up the good work mah man."
-                        disabled={true}
-                      />,
-                      <ListItem
-                        key={'b'}
-                        leftAvatar={<Avatar src="https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang2.jpg?raw=true" />}
-                        primaryText="Brendan Lim"
-                        secondaryText="Good Job"
-                        disabled={true}
-                      />,
-                      <ListItem
-                        key={'comment'}
-                        disabled={true}
-                        primaryText={
-                          <div style={s.commentContainer}>
-                            <TextField
-                              hintText="Comment"
-                              style={s.commentText}
-                            />
-                            <IconButton iconClassName="fas fa-pencil-alt" onClick={this.commentNow}/>
-                          </div>}
-                        style={s.comment}
-                      />,
-                    ]}
-                  />
+            <Thread
+            item={{
+              title: 'Best tip i have so far',
+              body: 'Pro tip: sleep enough.',
+              id: 0,
+              avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang2.jpg?raw=true',
+              name: 'Brendan Lim',
+              comments: [{comment: 'yeah boi', id: 100, avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang3.jpg?raw=true', name: 'Kevin Zheng'}]
+            }}
+            />
+            <Thread
+            item={{
+              title: 'What I accomplished',
+              body: 'I was able to not procrastinate today!',
+              id: 1000,
+              avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang1.jpg?raw=true',
+              name: 'Huaiyu Wang',
+              comments: [
+                {comment: 'Amazing dude, keep up the good work mah man.', id: 200, avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang3.jpg?raw=true', name: 'Kevin Zheng'},
+                {comment: 'Good Job', id: 300, avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang2.jpg?raw=true', name: 'Brendan Lim'}
+              ]
+            }}
+            />
                   {this._renderThreads()}
             </List>
         </div>
