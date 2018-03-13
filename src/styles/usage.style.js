@@ -3,7 +3,7 @@ import style from './style';
 const s = Object.create(style);
 
 s.title = {
-  fontSize: '24px',
+  fontSize: '28px',
   marginTop: '20px',
   marginBottom: '0.5vh',
   textAlign: 'center'

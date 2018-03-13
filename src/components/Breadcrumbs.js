@@ -11,6 +11,7 @@ const breadCrumbTitles = {
   usage: 'Usage',
   example: 'Example',
   community: 'Community',
+  profile: 'Profile',
   'two-deep': 'Two Deep',
 };
 

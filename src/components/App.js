@@ -8,6 +8,7 @@ import Register from './Register';
 import Home from './Home';
 import Usage from './Usage';
 import Community from './Community';
+import Profile from './Profile';
 import ExampleComponent from './ExampleComponent';
 import PageNotFound from './PageNotFound';
 import Breadcrumbs from './Breadcrumbs';
@@ -65,6 +66,7 @@ class App extends React.Component {
               <Route exact path="/home" component={Home} />
               <Route exact path="/usage" component={Usage} />
               <Route exact path="/community" component={Community} />
+              <Route exact path="/profile" component={Profile} />
               <Route exact path="/example" component={ExampleComponent} />
               <Route component={PageNotFound} />
             </Switch>

@@ -20,7 +20,7 @@ class NavBar extends React.Component {
       homePath: '/home',
       usagePath: '/usage',
       communityPath: '/community',
-      profilePath: '/example',
+      profilePath: '/profile',
       default: '/',
       open: false
     }

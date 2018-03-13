@@ -16,34 +16,25 @@ s.subtitle = {
   textAlign: 'center'
 };
 
-s.dialog = {
-  width: '400px',
-  maxWidth: 'none',
-  paddingRight: '50px'
+s.profileInfo = {
+  width: '140px',
+  marginTop: '30px'
 };
 
-s.startThread = {
-  margin: '20px'
-}
+s.userSpecific = {
+  fontSize: '14px'
+};
 
-s.commentContainer = {
-  marginLeft: '55px'
-}
+s.superContainer = {
+  margin: '15px 0',
+  display: 'flex',
+  justifyContent: 'space-around'
+};
 
-s.comment = {
-  color: 'grey',
-  backgroundColor: 'antiquewhite',
-  paddingRight: '0'
-}
-
-s.commentText = {
-  width: '240px'
-}
-
-s.container = {
+s.settingsContainer = {
   width: '100%',
-  height: '476px',
+  height: '259px',
   overflowY: 'auto'
-}
+};
 
 export default s;

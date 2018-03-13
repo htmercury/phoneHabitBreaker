@@ -58,7 +58,7 @@ export default class SettingsButton extends React.Component {
           >
             <Menu>
               <MenuItem primaryText="Refresh" />
-              <MenuItem primaryText="Help &amp; feedback" containerElement={<Link to="/example"></Link>} />
+              <MenuItem primaryText="Help &amp; feedback" containerElement={<Link to="/community"></Link>} />
               <MenuItem primaryText="Settings" containerElement={<Link to="/example"></Link>} />
               <MenuItem primaryText="Sign out" containerElement={<Link to="/"></Link>} />
             </Menu>
