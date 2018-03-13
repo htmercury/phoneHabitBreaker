@@ -77,7 +77,7 @@ export default class Usage extends React.Component {
         </div>
         <LineChart
           axes
-          height={220}
+          height={210}
           width={380}
           xTicks={6}
           yTicks={4}
@@ -103,7 +103,7 @@ export default class Usage extends React.Component {
         </div>
         <LineChart
           axes
-          height={220}
+          height={210}
           width={380}
           xTicks={6}
           yTicks={4}

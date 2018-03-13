@@ -4,7 +4,7 @@ const s = Object.create(style);
 
 s.title = {
   fontSize: '24px',
-  marginTop: '10px',
+  marginTop: '20px',
   marginBottom: '0.5vh',
   textAlign: 'center'
 };

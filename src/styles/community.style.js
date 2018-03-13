@@ -4,7 +4,7 @@ const s = Object.create(style);
 
 s.title = {
   fontSize: '24px',
-  marginTop: '10px',
+  marginTop: '20px',
   marginBottom: '0.5vh',
   textAlign: 'center'
 };
@@ -42,7 +42,7 @@ s.commentText = {
 
 s.container = {
   width: '100%',
-  height: '492px',
+  height: '482px',
   overflowY: 'auto'
 }
 
