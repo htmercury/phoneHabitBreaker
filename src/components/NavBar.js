@@ -19,7 +19,7 @@ class NavBar extends React.Component {
     this.state = {
       homePath: '/home',
       usagePath: '/usage',
-      communityPath: '/example',
+      communityPath: '/community',
       profilePath: '/example',
       default: '/',
       open: false

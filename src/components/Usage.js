@@ -1,7 +1,5 @@
 import React from 'react';
 import Interactive from 'react-interactive';
-import { Link } from 'react-router-dom';
-import { Code } from '../styles/style';
 import s from '../styles/usage.style';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
@@ -45,12 +43,12 @@ export default class Usage extends React.Component {
 
   handleDailyChange = (event, index, value) => {
     this.setState({day:value});
-    this.updateDay(this.state.day);
+    this.updateDay(value);
   }
 
   handleMonthlyChange = (event, index, value) => {
     this.setState({month:value});
-    this.updateMonth(this.state.month);
+    this.updateMonth(value);
   }
 
   render() {
@@ -62,7 +60,6 @@ export default class Usage extends React.Component {
       >{text}</Interactive>
     );
 
-    let data = require('csv-loader?delimiter=,!../data/weekly.csv');
 
     return (
       <div>

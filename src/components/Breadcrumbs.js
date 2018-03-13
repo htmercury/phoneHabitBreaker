@@ -10,6 +10,7 @@ const breadCrumbTitles = {
   register: 'Register',
   usage: 'Usage',
   example: 'Example',
+  community: 'Community',
   'two-deep': 'Two Deep',
 };
 
