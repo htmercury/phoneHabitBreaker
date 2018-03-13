@@ -18,7 +18,7 @@ class NavBar extends React.Component {
     super(props);
     this.state = {
       homePath: '/home',
-      usagePath: '/example',
+      usagePath: '/usage',
       communityPath: '/example',
       profilePath: '/example',
       default: '/',
@@ -28,7 +28,6 @@ class NavBar extends React.Component {
   }
 
   handleOpen(event, path) {
-    console.log(this.props.loginStatus);
     if (!this.props.loginStatus) {
       this.setState({open: true});
     }
@@ -60,19 +59,20 @@ class NavBar extends React.Component {
       />,
     ];
     return (
+      <div>
+      <div>
+         <Dialog
+              title="Are you sure?"
+              actions={actions}
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+              contentStyle={s.dialog}
+              >
+              Login without an account.
+        </Dialog>
+      </div>
         <div style={s.navBar}>
-          <div>
-             <Dialog
-                  title="Are you sure?"
-                  actions={actions}
-                  modal={false}
-                  open={this.state.open}
-                  onRequestClose={this.handleClose}
-                  contentStyle={s.dialog}
-                  >
-                  Login without an account.
-            </Dialog>
-          </div>
           <IconButton
             style={s.button}
             tooltip='Home'
@@ -96,7 +96,7 @@ class NavBar extends React.Component {
             tooltip='Community'
             tooltipPosition='top-center'
             touch={true}
-            onClick={(e) => this.handleOpen(e, this.state.examplePath)}
+            onClick={(e) => this.handleOpen(e, this.state.communityPath)}
           >
           <FontIcon className="material-icons" style={iconStyles} color={blueGrey50}>group</FontIcon>
           </IconButton>
@@ -109,6 +109,7 @@ class NavBar extends React.Component {
           >
           <FontIcon className="material-icons" style={iconStyles} color={blueGrey50}>person_pin</FontIcon>
           </IconButton>
+        </div>
         </div>
       );
     }

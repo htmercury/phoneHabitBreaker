@@ -8,6 +8,8 @@ const breadCrumbTitles = {
   '': 'Login',
   home: 'Home',
   register: 'Register',
+  usage: 'Usage',
+  example: 'Example',
   'two-deep': 'Two Deep',
 };
 
