@@ -53,7 +53,7 @@ export default class Usage extends React.Component {
         id: this.state.threadCount,
         avatar: 'https://github.com/htmercury/phoneHabitBreaker/blob/master/docs/images/touxiang6.jpg?raw=true',
         name: 'Hang Wu',
-        comments: ['']
+        comments: []
       };
       let currThreadArray = this.state.threadArray;
       currThreadArray.push(thread);
