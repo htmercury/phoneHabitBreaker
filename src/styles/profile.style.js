@@ -17,7 +17,7 @@ s.subtitle = {
 };
 
 s.profileInfo = {
-  width: '140px',
+  width: '150px',
   marginTop: '30px'
 };
 
@@ -32,9 +32,18 @@ s.superContainer = {
 };
 
 s.settingsContainer = {
-  width: '100%',
-  height: '259px',
-  overflowY: 'auto'
+  marginTop: '20px'
+};
+
+s.directions = {
+  marginLeft: '15px',
+  fontSize: '14px',
+  color: 'grey'
+};
+
+s.toggle = {
+  margin: '10px 15px',
+  width: '360px'
 };
 
 export default s;

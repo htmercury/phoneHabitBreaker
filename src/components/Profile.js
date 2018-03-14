@@ -4,6 +4,7 @@ import Avatar from 'material-ui/Avatar';
 import FontIcon from 'material-ui/FontIcon';
 import Divider from 'material-ui/Divider';
 import Subheader from 'material-ui/Subheader';
+import Toggle from 'material-ui/Toggle';
 
 
 export default class Usage extends React.Component {
@@ -33,7 +34,35 @@ export default class Usage extends React.Component {
         </div>
         <Divider />
         <Subheader style={{fontSize: '16px'}}>Your Settings</Subheader>
+        <p style={s.directions}>Disabled apps while a session is running:</p>
         <div style={s.settingsContainer}>
+        <Toggle
+          label="Facebook"
+          style={s.toggle}
+          defaultToggled={true}
+        />
+        <Toggle
+          label="Twitter"
+          style={s.toggle}
+        />
+        <Toggle
+          label="Tumblr"
+          style={s.toggle}
+        />
+        <Toggle
+          label="Instagram"
+          style={s.toggle}
+          defaultToggled={true}
+        />
+        <Toggle
+          label="SnapChat"
+          style={s.toggle}
+          defaultToggled={true}
+        />
+        <Toggle
+          label="Reddit"
+          style={s.toggle}
+        />
         </div>
       </div>
     );
