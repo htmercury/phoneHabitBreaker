@@ -23,7 +23,8 @@ export default class Home extends React.Component {
       seconds: 0,
       started: false,
       submitText: 'start!',
-      open: false
+      open: false,
+      sessionStart: true
     };
     this.handleHourChange = this.handleHourChange.bind(this);
     this.handleMinuteChange = this.handleMinuteChange.bind(this);
@@ -72,6 +73,12 @@ export default class Home extends React.Component {
   componentWillUnmount() {
     clearTimeout(this.timer);
   }
+
+  handleRequestClose = () => {
+    this.setState({
+      sessionStart: false,
+    });
+  };
 
   progress(completed) {
     if (completed > 100) {
