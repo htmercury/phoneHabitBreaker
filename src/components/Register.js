@@ -7,6 +7,7 @@ import s from '../styles/register.style';
 // text fields
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import Checkbox from 'material-ui/Checkbox';
 
 class Register extends React.Component {
   constructor(props) {
@@ -115,6 +116,11 @@ class Register extends React.Component {
         errorText={this.state.passwordError}
         value={this.state.password}
         onChange={this.handlePasswordChange}
+        />
+        <Checkbox
+          label="Receive email updates from My Time."
+          style={{marginTop: '15px'}}
+          defaultChecked={true}
         />
         <div style={s.buttonContainer}>
           <RaisedButton
