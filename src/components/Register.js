@@ -58,16 +58,22 @@ class Register extends React.Component {
     if (this.state.username == "") {
       this.setState({usernameError: "This field is required."});
     }
+    else if (this.state.username.length < 4) {
+      this.setState({usernameError: "Username needs to be at least 4 characters"});
+    }
     else {
       this.setState({usernameError: ""});
     }
     if (this.state.password == "") {
       this.setState({passwordError: "This field is required."});
     }
+    else if (this.state.password.length < 8) {
+      this.setState({passwordError: "Password needs to be at least 8 characters"});
+    }
     else {
       this.setState({passwordError: ""});
     }
-    if (this.state.firstName && this.state.lastName && this.state.username && this.state.password)
+    if (this.state.firstName && this.state.lastName && this.state.username >= 4 && this.state.password >= 8)
       this.props.history.push('/home');
     event.preventDefault();
   }
