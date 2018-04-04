@@ -1,3 +1,15 @@
+# My Time - Phone Habit Breaker App
+
+[live site][liveSite]
+
+This is a final mock up of an mobile application for managing a user's time spent on a phone. The single page web application was built for Northwestern's EECS 330 (Human Computer Interaction) where the theme at the time focused on Behavioral Change.
+
+## About
+The web app was built using React, Node.js, and the Material UI framework.
+
+## Special Thanks
+Hats off to rafrex for the awesome boiler plate [repo][thanks] for hosting single page apps (SPA) on github.
+
 # Single Page Apps for GitHub Pages
 
 [Live example][liveExample]  
@@ -97,7 +109,9 @@ I have included `webpack-dev-server` for testing changes locally. It can be acce
 [nojekyll]: https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
 
 <!-- other links -->
+[thanks]: https://github.com/rafrex/spa-github-pages/
 [liveExample]: http://spa-github-pages.rafrex.com
+[liveSite]: https://htmercury.github.io/phoneHabitBreaker/
 [react]: https://github.com/facebook/react
 [reactRouter]: https://github.com/ReactTraining/react-router
 [seoLand]: http://searchengineland.com/tested-googlebot-crawls-javascript-heres-learned-220157
